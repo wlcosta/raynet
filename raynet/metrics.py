@@ -66,8 +66,8 @@ class VoxelMask(object):
         idxs = np.round((points - self._bbox_min - self._steps / 2) / self._steps).astype(int)
         points = points[:, self._mask[idxs[0], idxs[1], idxs[2]] == 1]
 
-        print "Filter out %d out of %d points" % (
-            X.shape[1] - points.shape[1], X.shape[1])
+        print("Filter out %d out of %d points" % (
+            X.shape[1] - points.shape[1], X.shape[1]))
 
         # Save to file, if we have specified an output directory
         self._to_file(points)
@@ -118,8 +118,8 @@ class ReduceDensity(object):
                 index_set[_id] = 0
                 index_set[i] = 1
 
-        print "Filter out %d out of %d points" % (
-            X.shape[1] - X[:, index_set].shape[1], X.shape[1])
+        print("Filter out %d out of %d points" % (
+            X.shape[1] - X[:, index_set].shape[1], X.shape[1]))
 
         # Save to file, if we have specified an output directory
         self._to_file(X[:, index_set])

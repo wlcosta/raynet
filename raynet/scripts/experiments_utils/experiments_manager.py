@@ -19,7 +19,7 @@ def set_output_directory(output_directory):
         for _ in range(20)
     )
 
-    print "Create %r folder for current experiment" % (experiment_tag,)
+    print("Create %r folder for current experiment" % (experiment_tag,))
     experiment_directory = os.path.join(output_directory, experiment_tag)
     if not os.path.exists(experiment_directory):
         os.makedirs(experiment_directory)
@@ -68,8 +68,8 @@ class Metrics(object):
 
     @classmethod
     def from_file(cls, training_file, validation_file):
-        print training_file
-        print validation_file
+        print(training_file)
+        print(validation_file)
 
         train_data = cls._parse_from_file(training_file)
         validation_data = cls._parse_from_file(validation_file)

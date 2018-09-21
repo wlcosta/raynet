@@ -177,7 +177,7 @@ def belief_propagation(
 
     # Iterate over the rays multiple times
     for it in xrange(bp_iterations):
-        print "Iteration %d " % (it,)
+        print ("Iteration %d " % (it,))
         for i in range(0, N, batch_size):
             _, msgs = bp(
                 S[i:i+batch_size],

@@ -11,7 +11,7 @@ import numpy as np
 try:
     import pycuda
 except ImportError:
-    print "******PyCUDA is required for the forward pass******"
+    print("******PyCUDA is required for the forward pass******")
     sys.exit(0)
 
 from ..common.generation_parameters import GenerationParameters

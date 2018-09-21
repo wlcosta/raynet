@@ -120,8 +120,8 @@ def single_ray_belief_propagation(ray_voxel_indices,
     t = np.log(ray_to_occupancy_new_pos) - np.log(1 - ray_to_occupancy_new_pos)
 
     if np.isnan(t).any() or np.isinf(t).any():
-        print "ray_to_occupancy_pon contains weird values %r" % (t)
-        print "ray_to_occupancy_new_pos", ray_to_occupancy_new_pos
+        print("ray_to_occupancy_pon contains weird values %r" % (t))
+        print("ray_to_occupancy_new_pos", ray_to_occupancy_new_pos)
 
     return t
 
@@ -293,7 +293,7 @@ def belief_propagation(
 
     # Iterate over the rays multiple times
     for it in xrange(bp_iterations):
-        print "Iteration %d " % (it,)
+        print("Iteration %d " % (it,))
         for r in xrange(N):
             # Get the actual number of voxels which this ray passes through
             c = ray_voxel_count[r]

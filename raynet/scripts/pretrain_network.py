@@ -73,7 +73,7 @@ def collect_test_set(
     # First set the random state
     prng_state = np.random.get_state()
     np.random.seed(random_state)
-    print "Collecting test set..."
+    print("Collecting test set...")
 
     # Specify the dimensionality of the output
     X = [
@@ -269,7 +269,7 @@ def main(argv=None):
         output_shape
     )
 
-    print "Cache %d samples for training" % (args.training_cached_samples,)
+    print("Cache %d samples for training" % (args.training_cached_samples,))
 
     train_bp = BatchProvider(
         training_dataset,
@@ -329,7 +329,7 @@ def main(argv=None):
         )
     # Save the parameters and the results of the current experiment for future
     # use
-    print "Save results before exiting in %s folder" % (experiment_directory)
+    print("Save results before exiting in %s folder" % (experiment_directory))
     save_experiment_locally(
         params_ordering,
         params,

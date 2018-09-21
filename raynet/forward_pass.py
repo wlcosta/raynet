@@ -294,7 +294,7 @@ class MultiViewCNNForwardPass(ForwardPass):
             )
             b = datetime.datetime.now()
             c = b - a
-            print "Features computation - ", c.total_seconds()
+            print("Features computation - ", c.total_seconds())
 
             # Get the projection matrices of all the neighbor views, the
             # projection matrix and the camera center of the reference view
@@ -333,7 +333,7 @@ class MultiViewCNNForwardPass(ForwardPass):
 
             b = datetime.datetime.now()
             c = b - a
-            print "Per-pixel depth estimation - ", c.total_seconds()
+            print("Per-pixel depth estimation - ", c.total_seconds())
 
             # Move to the next image
             self.ref_idx += skip
@@ -432,7 +432,7 @@ class MultiViewCNNVoxelSpaceForwardPass(ForwardPass):
             )
             b = datetime.datetime.now()
             c = b - a
-            print "Features computation - ", c.total_seconds()
+            print("Features computation - ", c.total_seconds())
 
             # Get the projection matrices of all the neighbor views, the
             # projection matrix and the camera center of the reference view
@@ -474,7 +474,7 @@ class MultiViewCNNVoxelSpaceForwardPass(ForwardPass):
 
             b = datetime.datetime.now()
             c = b - a
-            print "Per-pixel depth estimation - ", c.total_seconds()
+            print("Per-pixel depth estimation - ", c.total_seconds())
 
             # Move to the next image
             self.ref_idx += skip
@@ -540,7 +540,7 @@ class RayNetForwardPass(ForwardPass):
         # Create a temporary directory to save the per-image
         # ray_to_occupancy_messages during the MRF inference
         self.ray_occ_msgs_dir = mkdtemp()
-        print "Saving stuff to random directory %s .." % (self.ray_occ_msgs_dir,)
+        print("Saving stuff to random directory %s .." % (self.ray_occ_msgs_dir,))
 
     def raynet_fp(self, scene, feature_size):
         if self._fp is None:
@@ -591,7 +591,7 @@ class RayNetForwardPass(ForwardPass):
 
         # Iterate over the rays multiple times
         for it in xrange(bp_iterations):
-            print "Iteration %d " % (it,)
+            print("Iteration %d " % (it,))
             # Interate over each image in the images_range
             for ref_idx in xrange(start_img_idx, end_img_idx, skip):
                 # Get the valid rays for the current image
@@ -624,7 +624,7 @@ class RayNetForwardPass(ForwardPass):
                 )
                 b = datetime.datetime.now()
                 c = b - a
-                print "Features computation - ", c.total_seconds()
+                print("Features computation - ", c.total_seconds())
 
                 # Get the projection matrices of all the neighbor views, the
                 # projection matrix and the camera center of the reference view
@@ -666,7 +666,7 @@ class RayNetForwardPass(ForwardPass):
 
                 b = datetime.datetime.now()
                 c = b - a
-                print "Message passing - ", c.total_seconds()
+                print("Message passing - ", c.total_seconds())
 
                 # TODO: Fix the memory allocation pattern so we don't delete and
                 # reallocate
@@ -693,7 +693,7 @@ class RayNetForwardPass(ForwardPass):
             )
             b = datetime.datetime.now()
             c = b - a
-            print "Features computation - ", c.total_seconds()
+            print("Features computation - ", c.total_seconds())
 
             # Get the projection matrices of all the neighbor views, the
             # projection matrix and the camera center of the reference view
@@ -737,7 +737,7 @@ class RayNetForwardPass(ForwardPass):
 
             b = datetime.datetime.now()
             c = b - a
-            print "Per-pixel depth estimation - ", c.total_seconds()
+            print("Per-pixel depth estimation - ", c.total_seconds())
 
             # Move to the next image
             self.ref_idx += skip

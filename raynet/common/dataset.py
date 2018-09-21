@@ -46,7 +46,7 @@ class RestrepoDataset(Dataset):
         self._scene_mapping = {}
         for i, x in enumerate(self.scenes):
             self._scene_mapping[i] = x
-        print self._scene_mapping
+        print(self._scene_mapping)
 
     def get_scene(self, scene_idx):
         if scene_idx in self._scene_mapping.keys():

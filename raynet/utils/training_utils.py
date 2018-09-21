@@ -128,11 +128,11 @@ def gaussian_distribution(stddev_factor, std_is_distance):
         D = np.exp(-dists/(2*std**2))
 
         if D.sum() == 0:
-            print "Something went wrong"
-            print "Distances from target:", dists
-            print "target:", target
-            print "points:", points
-            print std
+            print("Something went wrong")
+            print("Distances from target:", dists)
+            print("target:", target)
+            print("points:", points)
+            print(std)
             import sys
             sys.exit(0)
 

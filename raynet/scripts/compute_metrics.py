@@ -132,7 +132,7 @@ def main(argv=None):
         consistency_threshold=args.consistency_threshold,
         n_neighbors=args.n_neighbors
     )
-    print "Saving predicted point-cloud for scene %d ..." % (args.scene_idx,)
+    print("Saving predicted point-cloud for scene %d ..." % (args.scene_idx,))
     if not os.path.exists(args.output_directory):
         os.makedirs(args.output_directory)
 
@@ -174,7 +174,7 @@ def main(argv=None):
                 ),
                 values
             )
-        print mi, " mean: ", values.mean(), " median: ", np.median(values)
+        print(mi, " mean: ", values.mean(), " median: ", np.median(values))
 
 
 if __name__ == "__main__":

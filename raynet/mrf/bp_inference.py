@@ -56,7 +56,7 @@ class BPInference(object):
             )
             s += N
             np.save(os.path.join(output_directory, "depth_mrf_%03d" % (image_cnt,)), D)
-            print "%d" % (image_cnt,)
+            print("%d" % (image_cnt,))
             image_cnt += 1
 
     def update_bp_messages(
@@ -125,7 +125,7 @@ class BPInference(object):
         ray_to_occupancy_pon=None,
         S_new=None
     ):
-        print "Computing the messages ..."
+        print("Computing the messages ...")
         ray_to_occupancy_accumulated_pon, ray_to_occupancy_pon =\
             self.update_bp_messages(
                 S,
@@ -134,7 +134,7 @@ class BPInference(object):
                 ray_to_occupancy_pon
             )
 
-        print "Computing the new depth distribution ..."
+        print("Computing the new depth distribution ...")
         S_new = self.estimate_depth_probabilities_from_messages(
             S,
             ray_voxel_indices,

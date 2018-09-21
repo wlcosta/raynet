@@ -281,9 +281,9 @@ def main(argv=None):
         train_f.flush()
         if it % args.validate_every == 0:
             val_loss = _forward_pass_tf(test_set)
-            print "Validation loss in %d iteration: %f - gamma:%f" % (
+            print("Validation loss in %d iteration: %f - gamma:%f" % (
                 it, val_loss[0], gamma
-            )
+            ))
             val_f.write(str(val_loss[0]))
             val_f.write("\n")
             val_f.flush()

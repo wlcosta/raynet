@@ -244,7 +244,7 @@ class RestrepoScene(Scene):
     def _get_oct_tree(self):
         if self._oct_tree is None:
             triangles = parse_gt_mesh(self._basepath)
-            print "Building the octree for the current scene. Be patient..."
+            print("Building the octree for the current scene. Be patient...")
             self._oct_tree = OctTree(triangles)
 
         return self._oct_tree
